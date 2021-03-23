@@ -1,8 +1,9 @@
 # Front End Test ML
 
-Aplicación ML, esta formada por un search box ubicado en el header component, un list items para visualizar los productos buscados por un usuario y un componente para el detalle de producto, ademas de componentes mas pequeños como info, para mostrar los errores o informacion al usuario.
+Aplicación ML, está formada por un search-box ubicado en el header component, un list-items para visualizar los productos buscados por un usuario y un componente para el detalle de producto, ademas de componentes mas pequeños como info, para mostrar los errores o información al usuario.
 
-La aplicación esta divida en una configuración general para correr los ambientes de front y back, cada ambiente esta divido en su propia carpeta, client tiene todo lo relacionado al front del app y api tiene todo lo relacionado a construcción del api para ser utilizada en el front.
+La aplicación esta divida en una configuración general para correr los ambientes de front y back. Cada ambiente esta divido en su propia carpeta, 
+client tiene todo lo relacionado al Frontend del app y api tiene todo lo relacionado a construcción del api para ser consumida por el FrontEnd.
 
 ## Pasos para correr el app.
 
@@ -22,7 +23,7 @@ cd client
 npm install
 ```
 
-Luego de instalar las dependencias de cada ambiente, en el root del proyecto, puedes correr el siguiente comando:
+Luego de instalar las dependencias de cada ambiente, en el root del proyecto puedes correr el siguiente comando:
 
 ```bash
 cd ./
