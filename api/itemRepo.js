@@ -25,12 +25,12 @@ const getCategories = (data) => {
 
   if (data.available_filters.some(category)) {
     categories = data.available_filters
-      .find((filter) => filter.id === "category")
+      .find(category)
       .values.sort((a, b) => b.results - a.results)
       .map((category) => category.id);
   } else {
     categories = data.filters
-      .find((filter) => filter.id === "category")
+      .find(category)
       .values.map((category) => category.id);
   }
 
