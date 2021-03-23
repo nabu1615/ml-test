@@ -2,17 +2,17 @@
 @import "../../styles/functions";
 
 .detail {
-    background-color: color('white');
-    border-start-start-radius: rem(4px);
-    border-start-end-radius: rem(4px);
     color: color('grey-100');
     margin-bottom: rem(36px);
 
     &__wrapper {
         display: grid;
-        grid-template-columns: 694px 1fr;
         padding-top: rem(32px);
         padding-left: rem(32px);
+
+        @media only screen and (min-width: rem(760px)) {
+            grid-template-columns: 694px 1fr;
+        }
     }
 
     &__info {

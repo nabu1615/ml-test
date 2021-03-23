@@ -33,6 +33,8 @@ const Header = () => {
               <img
                 src={logo}
                 alt="Mercado Libre Colombia - Donde comprar y vender de todo"
+                width="53"
+                height="36"
               />
             </Link>
           </BrowserRouter>
@@ -45,7 +47,7 @@ const Header = () => {
               value={searchField}
               onChange={handleChange}
             />
-            <button type="submit" className="search__button"></button>
+            <button aria-label="Search Button" type="submit" className="search__button"></button>
           </form>
         </div>
       </div>

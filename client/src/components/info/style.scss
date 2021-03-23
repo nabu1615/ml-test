@@ -2,15 +2,17 @@
 @import "../../styles/functions";
 
 .info {
-    background-color: color('white');
-    padding: rem(30px);
-    border-radius: rem(4px);
-    text-align: center;
-    margin: 20px 0;
+  margin: rem(20px) 0;
+  padding: rem(30px);
+  text-align: center;
 
-    &__icon {
-        height: 120px;
-        width: 120px;
-        opacity: .4;
-    }
+  &__title {
+    padding: 0 rem(90px);
+  }
+
+  &__icon {
+    height: rem(120px);
+    opacity: 0.4;
+    width: rem(120px);
+  }
 }

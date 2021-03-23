@@ -1,5 +1,5 @@
-@import 'functions';
-@import 'vars';
+@import "functions";
+@import "vars";
 
 * {
   box-sizing: border-box;
@@ -7,8 +7,8 @@
 
 html,
 body {
-  background-color: color('grey-300');
-  color: color('grey-200');
+  background-color: color("grey-300");
+  color: color("grey-200");
   font-family: $main-font;
   font-weight: 400;
   height: 100%;
@@ -28,7 +28,7 @@ p {
 }
 
 .button {
-  color: color('white');
+  color: color("white");
   border: none;
   padding: rem(16px);
   font-size: rem(16px);
@@ -36,11 +36,17 @@ p {
   font-weight: 100;
 
   &:hover {
-    opacity: .9;
+    opacity: 0.9;
   }
 
   &--primary {
-    background-color: color('blue-100');
+    background-color: color("blue-100");
     border-radius: rem(4px);
   }
+}
+
+.main-box {
+  border-start-start-radius: rem(4px);
+  border-start-end-radius: rem(4px);
+  background-color: color('white');
 }

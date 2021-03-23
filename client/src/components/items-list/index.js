@@ -1,11 +1,12 @@
 import React, { useState, useContext, useEffect } from "react";
 import { API_URL } from "../../contants";
 import { useLocation, Link } from "react-router-dom";
-import "./style.scss";
-// import Categories from "../categories";
+import Categories from "../categories";
 import shipping from "../../assets/ic_shipping.png";
 import priceFormat from "../../utils/priceFormat";
 import SearchContext from "../../context/SearchContext";
+import Info from "../info";
+import "./style.scss";
 
 const useQueryParam = () => {
   return new URLSearchParams(useLocation().search);
@@ -13,19 +14,25 @@ const useQueryParam = () => {
 
 const ItemList = () => {
   const queryParam = useQueryParam();
-  const [items, setItems] = useState([]);
-  const { searchValue } = useContext(SearchContext);
+  const { searchValue, setSearchValue, setCategoryId } = useContext(SearchContext);
+  const [items, setItems] = useState(null);
 
-  useEffect(() => {
-    (async function fetchData() {
-      await getItems(queryParam.get("search"));
-    })();
+  useEffect(async () => {
+    fetchData();
+
+
+    setSearchValue(queryParam.get("search"));
   }, [searchValue]);
 
-  const getItems = async (searchValue) => {
-    const response = await fetch(`${API_URL}/items?q=${searchValue}`);
+  const fetchData = async () => {
+    await getItems(queryParam.get("search"))
+  }
+  
+  const getItems = async (searchParam) => {
+    const response = await fetch(`${API_URL}/items?q=${searchParam}`);
     const data = await response.json();
 
+    setCategoryId(data.categories[0]);
     setItems(data.items);
   };
 
@@ -65,8 +72,17 @@ const ItemList = () => {
 
   return (
     <React.Fragment>
-      {/* <Categories categories={categoriesMock} /> */}
-      <ul className="items">{itemsElement}</ul>
+      {itemsElement.length ? (
+        <>
+          <Categories />
+          <ul className="items main-box">{itemsElement}</ul>{" "}
+        </>
+      ) : (
+        <Info
+          message={`No encontramos ningun producto con "${searchValue}", Intenta buscar con otra palabra.`}
+          icon="error"
+        />
+      )}
     </React.Fragment>
   );
 };
