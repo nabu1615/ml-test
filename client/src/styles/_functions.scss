@@ -1,0 +1,9 @@
+@import 'vars';
+
+@function rem($px) {
+  @return $px / $base-font-size * 1rem;
+}
+
+@function color($base) {
+  @return map-get($colors, $base);
+}

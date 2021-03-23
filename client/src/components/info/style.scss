@@ -1,0 +1,16 @@
+@import "../../styles/vars";
+@import "../../styles/functions";
+
+.info {
+    background-color: color('white');
+    padding: rem(30px);
+    border-radius: rem(4px);
+    text-align: center;
+    margin: 20px 0;
+
+    &__icon {
+        height: 120px;
+        width: 120px;
+        opacity: .4;
+    }
+}

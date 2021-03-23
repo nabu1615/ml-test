@@ -1,0 +1,54 @@
+@import "../../styles/vars";
+@import "../../styles/functions";
+
+.detail {
+    background-color: color('white');
+    border-start-start-radius: rem(4px);
+    border-start-end-radius: rem(4px);
+    color: color('grey-100');
+    margin-bottom: rem(36px);
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 694px 1fr;
+        padding-top: rem(32px);
+        padding-left: rem(32px);
+    }
+
+    &__info {
+        width: 60%;
+        margin: 0 auto;
+    }
+
+    &__sold {
+        font-size: rem(14px);
+        margin: 0;
+    }
+
+    &__title {
+        font-size: rem(24px);
+        margin: rem(16px) 0 0;
+    }
+
+    &__amount {
+        font-size: rem(46px);
+        margin: rem(32px) 0;
+    }
+
+    &__image {
+        max-width: rem(680px);
+        max-height: rem(680px);
+        width: 100%;
+        border-radius: rem(4px);
+    }
+
+    &__description {
+        color: color('grey-200');
+        font-size: rem(16px);
+        margin: rem(32px) 0;
+    }
+
+    button {
+        width: 100%;
+    }
+}

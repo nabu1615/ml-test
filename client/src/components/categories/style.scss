@@ -1,0 +1,27 @@
+@import "../../styles/vars";
+@import "../../styles/functions";
+
+.categories {
+    display: flex;
+    padding: 0;
+    margin: 0 rem(10px);
+
+    &__item {
+        list-style: none;
+        font-size: rem(14px);
+        margin: rem(16px) 0;
+
+        &:last-child {
+            font-weight: bold;
+        }
+        
+        &:after {
+            content: '>';
+            margin: 0 rem(5px);
+        }
+
+        &:last-child::after {
+            content: '';
+        }
+    }
+}
