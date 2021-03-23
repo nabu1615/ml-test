@@ -30,6 +30,6 @@ cd ./
 npm run start
 ```
 
-Este comando iniciara los dos servidores, client y api.
+Este comando iniciará los dos servidores, client y api.
 
 Port: `http://localhost:3000/`
