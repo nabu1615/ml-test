@@ -17,9 +17,8 @@ const ItemList = () => {
   const { searchValue, setSearchValue, setCategoryId } = useContext(SearchContext);
   const [items, setItems] = useState(null);
 
-  useEffect(async () => {
+  useEffect(() => {
     fetchData();
-
 
     setSearchValue(queryParam.get("search"));
   }, [searchValue]);

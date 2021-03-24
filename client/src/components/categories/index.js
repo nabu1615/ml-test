@@ -8,13 +8,15 @@ const Categories = () => {
   const { categoryId } = useContext(SearchContext);
 
   useEffect(() => {
-    (async function fetchData() {
-      const response = await fetch(`${API_URL}/categories/${categoryId}`);
-      const data = await response.json();
-
-      setCategories(data.categories);
-    })();
+    fetchData();
   }, [categoryId]);
+
+  const fetchData = async () => {
+    const response = await fetch(`${API_URL}/categories/${categoryId}`);
+    const data = await response.json();
+
+    setCategories(data.categories);
+  }
 
   const categoriesList = categories
     ? categories.map((category, index) => {
