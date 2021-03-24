@@ -10,7 +10,7 @@ client tiene todo lo relacionado al Frontend del app y api tiene todo lo relacio
 ### API
 
 ```bash
-cd backend
+cd api
 npm install
 ```
 
