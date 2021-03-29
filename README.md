@@ -7,10 +7,10 @@ client tiene todo lo relacionado al Frontend del app y api tiene todo lo relacio
 
 ## Pasos para correr el app.
 
-#### Instalamos concurrently global (concurrently nos ayudara a correr los dos servidores al mismo tiempo con el comando npm run start)
+#### Instalamos concurrently (concurrently nos ayudara a correr los dos servidores al mismo tiempo con el comando npm run start)
 
 ```bash
-npm i -g concurrently
+npm install
 ```
 
 ### API
